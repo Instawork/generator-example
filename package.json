@@ -1,0 +1,12 @@
+{
+  "name": "generator-example",
+  "version": "1.0.0",
+  "description": "Yeoman generator example",
+  "files": ["generators"],
+  "keywords": ["yeoman-generator"],
+  "author": "Divyanshu Maithani <div.blackcat@gmail.com> (https://github.com/divyanshu013)",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^3.2.0"
+  }
+}
