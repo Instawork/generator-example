@@ -28,6 +28,25 @@ module.exports = class extends Generator {
   // second stage
   writing() {
     this.log('Writing files... 📝');
+
+    const { type, name } = this.answers;
+    if (type === 'screen') {
+      this.fs.copyTpl(
+        this.templatePath('component.js'),
+        this.destinationPath(`components/${name}.js`),
+        {
+          name,
+        },
+      );
+    } else {
+      this.fs.copyTpl(
+        this.templatePath('module.js'),
+        this.destinationPath(`modules/${name.toLowerCase()}.js`),
+        {
+          name,
+        },
+      );
+    }
   }
 
   // last stage
